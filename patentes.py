@@ -22,7 +22,7 @@ def imshow(img, new_fig=True, title=None, color_img=False, blocking=False, color
     if new_fig:
         plt.show(block=blocking)
 
-def mostrar_imagenes(imagenes, titulos):
+def mostrar_cuatro_imagenes(imagenes, titulos):
     num_imagenes = len(imagenes)
     num_filas = (num_imagenes + 1) // 2  # Si hay 1 o 2 imágenes, usa una fila; si hay 3 o 4, usa dos filas
 
