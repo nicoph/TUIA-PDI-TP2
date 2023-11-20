@@ -22,7 +22,7 @@ def imshow(img, new_fig=True, title=None, color_img=False, blocking=False, color
     if new_fig:
         plt.show(block=blocking)
 
-def mostrar_imagenes(imagenes, titulos):
+def mostrar_cuatro_imagenes(imagenes, titulos):
     num_imagenes = len(imagenes)
     num_filas = (num_imagenes + 1) // 2  # Si hay 1 o 2 imágenes, usa una fila; si hay 3 o 4, usa dos filas
 
@@ -263,7 +263,7 @@ def procesamiento_especial(archivos_imagen:list):
 
           _, thresh = cv2.threshold(contraste_aumentado, 205, 255, cv2.THRESH_BINARY)
           lista_imagenes_procesadas.append(thresh)
-          mostrar_cuatro_imagenes([img_gray, thresh],['Escala de Grises', 'Threshhold'] )
+          mostrar_cuatro_imagenes([img_bgr,img_gray, thresh],['Original','Escala de Grises', 'Threshhold'] )
           continue
           # Obtiene las dimensiones originales de la imagen
       alto, ancho = contraste_aumentado.shape[:2]
