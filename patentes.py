@@ -88,7 +88,7 @@ def procesamiento (listaImagenes:list):
 
       kernel = np.ones((15, 15), np.uint8)
       tophat = cv2.morphologyEx(thresh, cv2.MORPH_TOPHAT, kernel)
-
+ 
       kernel4 = cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(1,1))
       # Kernel para erosión
       kernel2 = np.array([[0, 1, 0],
